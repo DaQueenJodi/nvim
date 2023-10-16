@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
 
 vim.api.nvim_create_autocmd('TermOpen', {
   callback = function()
-    vim.opt.number = false;
     vim.opt.relativenumber = false;
+    vim.opt.number = false;
   end
 })

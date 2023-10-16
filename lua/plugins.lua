@@ -17,7 +17,12 @@ require("lazy").setup({
 	'sainnhe/edge',
 	'nvim-treesitter/nvim-treesitter',
 	'neovim/nvim-lspconfig',
-	'ziglang/zig.vim',
+	{
+		'ziglang/zig.vim',
+		config = function()
+			vim.g.zig_fmt_autosave = 0
+		end
+	},
 	'LnL7/vim-nix',
 	{ 
 		'hrsh7th/nvim-cmp', dependencies = {
@@ -26,5 +31,7 @@ require("lazy").setup({
 			'hrsh7th/cmp-buffer',
 			'L3MON4D3/LuaSnip'
 		}
-	}
+	},
+	'vim-scripts/paredit.vim',
+	'vlime/vlime'
 })

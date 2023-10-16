@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local servers = { "clangd", "zls", "hls" }
+local servers = { "clangd", "zls", "hls", "rust_analyzer"}
 
 for _, server_name in ipairs(servers) do
 	lspconfig[server_name].setup({
